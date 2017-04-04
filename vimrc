@@ -104,12 +104,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go', { 'tag': '*' }
 
 " JS
+Plug 'Valloric/YouCompleteMe'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
 Plug 'othree/html5.vim'
 Plug 'leshill/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'mattn/emmet-vim'
 
 " Git
 Plug 'fugitive.vim'
@@ -118,7 +121,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-"let g:fzf_command_prefix = 'Fzf'
+let g:fzf_command_prefix = ''
+
+" TernJS html support
+set omnifunc=tern#Complete
+"set ft=html.javascript_tern
+set ft=html.javascript
+
 let g:javascript_plugin_jsdoc = 1
 let g:syntastic_html_checkers = ['jshint']
 let g:syntastic_javascript_checkers = ['jshint']
@@ -139,3 +148,6 @@ augroup END
     " normal mode shortucts
     :let mapleader = " "
     :nmap <Leader><Leader> :w<Enter>
+    :nmap <Leader>sw "zyiw:Ag z
+
+
