@@ -5,6 +5,12 @@ alias l="ls"
 alias cd..="cd .."
 alias chrome="Google\ Chrome"
 
-alias ss='gource --seconds-per-day 0.1 --follow-user "Jared Blatt" --hide filenames,dirnames -f'
+alias gl="git pull"
+alias gp="git push"
+alias gn="git number"
+alias ga="gn add"
+alias gc="gn -c"
+alias gvim="gc vim"
 
-alias bcopy="buildr copyright"
+
+alias ss='gource --seconds-per-day 0.1 --follow-user "Billy Hardy" --hide filenames,dirnames -f'
