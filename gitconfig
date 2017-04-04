@@ -1,27 +1,20 @@
 [user]
-	email = hardywb@leidos.com
+	email = billy92@gmail.com
 	name = Billy Hardy
 [core]
-	excludesfile = /Users/billyhardy/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [clean]
 	requireForce = false
 [push]
 	default = simple
-[url "https://github"]
-	insteadOf = git://github
 [alias]
 	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths --enable=receive-pack .git/
 	diff = diff --color-words=\"\\\\w+|.\"
 	diff2 = diff --color-words=\"\\\\w+|.\"
 [init]
 	templatedir = ~/.git_template
-[credential]
-	helper = osxkeychain
 [color "diff"]
 	meta = 

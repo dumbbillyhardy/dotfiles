@@ -33,3 +33,5 @@ alias gc="gn -c"
 alias gitprune="git branch --merged | grep -v \"\*\" | grep -v master | grep -v release/ | xargs -n 1 git branch -d"
 
 export PATH="$PATH:$HOME/.fzf/bin"
+export PATH="$PATH:$HOME/bin/"
+export PATH="$PATH:/usr/sbin/"
