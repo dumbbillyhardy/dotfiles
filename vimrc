@@ -100,6 +100,11 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 call plug#begin('~/.vim/plugged')
+" General
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
+Plug 'junegunn/fzf.vim'
+
 " Go
 Plug 'fatih/vim-go', { 'tag': '*' }
 
@@ -117,8 +122,6 @@ Plug 'mattn/emmet-vim'
 " Git
 Plug 'fugitive.vim'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
-Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:fzf_command_prefix = ''
@@ -130,7 +133,7 @@ set ft=html.javascript
 
 let g:javascript_plugin_jsdoc = 1
 let g:syntastic_html_checkers = ['jshint']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 " reload vimrc whenever I save it
 augroup reload_vimrc " {
     autocmd!
@@ -142,6 +145,8 @@ augroup big_files
     autocmd Filetype * if (getfsize(@%) > 1000000) | setlocal syntax=OFF | endif
     " autocmd Filetype * :echom "a"
 augroup END
+
+map <C-n> :NERDTreeToggle<CR>
 
 " Key Bindings
   " insert mode shortcuts
