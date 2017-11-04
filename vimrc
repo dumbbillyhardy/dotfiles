@@ -87,6 +87,11 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
+" Eclim Settings/Config
+set nocompatible
+filetype plugin indent on
+
+
 " Textmate holdouts
 
 " Formatting
@@ -120,7 +125,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 
 " Git
-Plug 'fugitive.vim'
+"Plug 'fugitive.vim'
 
 call plug#end()
 
