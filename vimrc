@@ -2,8 +2,12 @@ set exrc
 set autoindent
 set si
 set shiftwidth=4
+set relativenumber
+colorscheme Monokai
 " Don't try to be vi compatible
 set nocompatible
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+set ft=html.javascript
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
@@ -17,7 +21,7 @@ syntax on
 filetype plugin indent on
 
 " TODO: Pick a leader key
-" let mapleader = ","
+let mapleader = ","
 
 " Security
 set modelines=0
@@ -45,15 +49,14 @@ set expandtab
 set smarttab
 set noshiftround
 
+" Insert Mapping
+:imap jk <esc>
+
 " Cursor motion
 set scrolloff=3
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
-
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
 
 " Splitting
 set splitbelow
@@ -79,6 +82,9 @@ set ignorecase
 set smartcase
 set showmatch
 map <leader><space> :let @/=''<cr> " clear search
+map <leader>h :sp<CR>
+map <leader>v :vs<CR>
+map <leader>x :q<CR>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
@@ -109,12 +115,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
+Plug 'terryma/vim-multiple-cursors'
 
 " Go
 Plug 'fatih/vim-go', { 'tag': '*' }
 
 " JS
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
@@ -136,9 +143,12 @@ set omnifunc=tern#Complete
 "set ft=html.javascript_tern
 set ft=html.javascript
 
+map <C-h> :NERDTreeToggle<CR>
+
 let g:javascript_plugin_jsdoc = 1
-let g:syntastic_html_checkers = ['jshint']
+let g:syntastic_html_checkers = ['eslint']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 " reload vimrc whenever I save it
 augroup reload_vimrc " {
     autocmd!
@@ -151,8 +161,6 @@ augroup big_files
     " autocmd Filetype * :echom "a"
 augroup END
 
-map <C-n> :NERDTreeToggle<CR>
-
 " Key Bindings
   " insert mode shortcuts
     " normal mode shortucts
@@ -160,4 +168,8 @@ map <C-n> :NERDTreeToggle<CR>
     :nmap <Leader><Leader> :w<Enter>
     :nmap <Leader>sw "zyiw:Ag z
 
-
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }

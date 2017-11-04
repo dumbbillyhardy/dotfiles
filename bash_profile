@@ -6,8 +6,9 @@ alias java8="export JAVA_HOME=$JAVA_8_HOME"
 
 alias tomcat='cd /Library/Tomcat'
 alias tomstart='(tomcat; bin/startup.sh)'
-alias tomstop='(tomcat; bin/shutdown.sh)'
-alias tomrestart='(tomstop;tomstart)'
+alias tomstop='(tomcat; bin/shutdown.sh; ps aux| grep tomcat)'
+#alias tomkill='ps aux|grep tomcat|awk -F" " "{printf($2) }" '
+alias tomrestart='(tomstop;tomstart;)'
 alias connectDocker='eval "$(docker-machine env default)"'
 
 if [ -f ~/.bash_aliases ]; then
@@ -35,3 +36,5 @@ alias gitprune="git branch --merged | grep -v \"\*\" | grep -v master | grep -v 
 export PATH="$PATH:$HOME/.fzf/bin"
 export PATH="$PATH:$HOME/bin/"
 export PATH="$PATH:/usr/sbin/"
+export PATH="$PATH:/Users/billyhardy/dev/leidos/dev-scripts/git"
+export FZF_DEFAULT_COMMAND="find -L * -path '*/\.*' -prune -o -type f -print -o -type l -print 2> /dev/null"

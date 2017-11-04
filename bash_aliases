@@ -18,3 +18,5 @@ alias gfa="g fetch --all"
 
 
 alias ss='gource --seconds-per-day 0.1 --follow-user "Billy Hardy" --hide filenames,dirnames -f'
+
+export SMITHERS="o.5RKGbICfF91y9S6zifyMPs6YTLdM0tdp"
