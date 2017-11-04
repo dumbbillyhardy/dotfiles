@@ -18,3 +18,5 @@
 	templatedir = ~/.git_template
 [color "diff"]
 	meta = 
+[credential]
+	helper = osxkeychain
