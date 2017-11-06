@@ -3,7 +3,7 @@ set autoindent
 set si
 set shiftwidth=4
 set relativenumber
-colorscheme Monokai
+colorscheme monokai
 " Don't try to be vi compatible
 set nocompatible
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
