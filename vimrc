@@ -17,7 +17,7 @@ syntax on
 filetype plugin indent on
 
 " TODO: Pick a leader key
-" let mapleader = ","
+let mapleader = ","
 
 " Security
 set modelines=0
@@ -79,6 +79,9 @@ set ignorecase
 set smartcase
 set showmatch
 map <leader><space> :let @/=''<cr> " clear search
+map <leader>h :sp<cr>
+map <leader>v :vs<cr>
+map <leader>x :q<cr>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
@@ -120,7 +123,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 
 " Git
-Plug 'fugitive.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
