@@ -1,10 +1,4 @@
-export EDITOR=/usr/local/bin/vim
-
-alias java6="export JAVA_HOME=$JAVA_6_HOME"
-alias java7="export JAVA_HOME=$JAVA_7_HOME"
-alias java8="export JAVA_HOME=$JAVA_8_HOME"
-
-alias tomcat='cd /Library/Tomcat'
+alias tomcat='cd $TOMCAT_HOME'
 alias tomstart='(tomcat; bin/startup.sh)'
 alias tomstop='(tomcat; bin/shutdown.sh)'
 alias tomrestart='(tomstop;tomstart)'
@@ -21,6 +15,11 @@ fi
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
+
+alias java6="export JAVA_HOME=$JAVA_6_HOME"
+alias java7="export JAVA_HOME=$JAVA_7_HOME"
+alias java8="export JAVA_HOME=$JAVA_8_HOME"
+
 
 alias ws="screen python -m SimpleHTTPServer"
 
