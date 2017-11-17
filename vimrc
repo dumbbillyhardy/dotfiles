@@ -168,8 +168,17 @@ augroup END
     :nmap <Leader><Leader> :w<Enter>
     :nmap <Leader>sw "zyiw:Ag z
 
+" FZF
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path(
+          \ "find . -path '*/\.*' -prune -o -print \| sed '1d;s:^..::'",
+          \ fzf#wrap({'dir': expand('%:p:h')}))
+nmap <C-p> :Files<enter>
+
+nmap <C-k> :Buffers<enter>
+
