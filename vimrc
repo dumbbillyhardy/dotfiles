@@ -1,3 +1,5 @@
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
 set exrc
 set autoindent
 set si
@@ -21,7 +23,7 @@ syntax on
 filetype plugin indent on
 
 " TODO: Pick a leader key
-let mapleader = ","
+let mapleader = " "
 
 " Security
 set modelines=0
@@ -82,7 +84,7 @@ set ignorecase
 set smartcase
 set showmatch
 map <leader><space> :let @/=''<cr> " clear search
-map <leader>h :sp<CR>
+map <leader>n :sp<CR>
 map <leader>v :vs<CR>
 map <leader>x :q<CR>
 nnoremap n nzzzv
@@ -182,3 +184,9 @@ nmap <C-p> :Files<enter>
 
 nmap <C-k> :Buffers<enter>
 
+" Eclim
+nmap <c-c><c-g> :JavaCallHierarchy<enter>
+nmap <c-c><c-h> :JavaHierarchy<enter>
+nmap <c-c><c-i> :JavaImpl<enter>
+nmap <c-c><c-r> :JavaRename 
+nmap <c-c>i :JavaImportOrganize<cr>
