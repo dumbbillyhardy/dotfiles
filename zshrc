@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/billyhardy/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,6 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/billyhardy/anaconda2/bin:/Users/billyhardy/.rvm/gems/jruby-1.7.19/bin:/Users/billyhardy/.rvm/gems/jruby-1.7.19@global/bin:/Users/billyhardy/.rvm/rubies/jruby-1.7.19/bin:/Users/billyhardy/.rvm/bin:/Users/billyhardy/.rbenv/shims:/Users/billyhardy/.rbenv/shims:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/lib/node_modules/web-component-tester/bin:/Users/billyhardy/.rvm/rubies/jruby-1.7.19/bin/jruby/bin:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/bin:/Users/billyhardy/.rvm/rubies/jruby-1.7.19/bin/jruby/bin:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

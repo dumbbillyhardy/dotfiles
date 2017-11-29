@@ -5,7 +5,7 @@ set autoindent
 set si
 set shiftwidth=4
 set relativenumber
-colorscheme Monokai
+colorscheme monokai
 " Don't try to be vi compatible
 set nocompatible
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
@@ -134,7 +134,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 
 " Git
-"Plug 'fugitive.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 

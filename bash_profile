@@ -1,6 +1,6 @@
 export EDITOR=/usr/local/bin/vim
 
-alias tomcat='cd /Library/Tomcat'
+alias tomcat='cd $TOMCAT_HOME'
 alias tomstart='(tomcat; bin/startup.sh)'
 alias tomstop='(tomcat; bin/shutdown.sh; ps aux| grep tomcat)'
 #alias tomkill='ps aux|grep tomcat|awk -F" " "{printf($2) }" '
@@ -22,6 +22,7 @@ fi
 alias java8="export JAVA_HOME=$JAVA_8_HOME"
 alias java9="export JAVA_HOME=$JAVA_9_HOME"
 java8
+
 alias ws="screen python -m SimpleHTTPServer"
 
 alias contributed="git log --author=\"Billy Hardy <hardywb@leidos.com>\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\n\", add, subs, loc }'"
