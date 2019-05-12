@@ -1,3 +1,4 @@
+cd ..
 ln -s dotfiles/bash_profile     .bash_profile     
 ln -s dotfiles/bash_aliases     .bash_aliases     
 ln -s dotfiles/zshrc            .zshrc            
