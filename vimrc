@@ -11,16 +11,14 @@ set nocompatible
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 set ft=html.javascript
 
-" Helps force plugins to load correctly when it is turned back on below
-filetype off
-
-" TODO: Load plugins here (pathogen or vundle)
-
 " Turn on syntax highlighting
 syntax on
 
-" For plugins to load correctly
-filetype plugin indent on
+filetype plugin on
+
+" Fuzzy find with no plugins
+set path+=**
+set wildmenu
 
 " TODO: Pick a leader key
 let mapleader = " "
