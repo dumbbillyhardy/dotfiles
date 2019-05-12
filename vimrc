@@ -118,13 +118,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'Valloric/YouCompleteMe'
 
 " Go
 Plug 'fatih/vim-go', { 'tag': '*' }
 
 " JS
-"Plug 'Valloric/YouCompleteMe'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+"Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'leafgarland/typescript-vim'
 Plug 'moll/vim-node'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
@@ -141,7 +142,7 @@ call plug#end()
 let g:fzf_command_prefix = ''
 
 " TernJS html support
-set omnifunc=tern#Complete
+"set omnifunc=tern#Complete
 "set ft=html.javascript_tern
 set ft=html.javascript
 
@@ -190,3 +191,13 @@ nmap <c-c><c-h> :JavaHierarchy<enter>
 nmap <c-c><c-i> :JavaImpl<enter>
 nmap <c-c><c-r> :JavaRename 
 nmap <c-c>i :JavaImportOrganize<cr>
+
+" YCM
+nmap <leader>jd :YcmCompleter GoToDefinition<enter>
+nmap <leader>jt :YcmCompleter GoToType<enter>
+nmap <leader>gt :YcmCompleter GetType<enter>
+nmap <leader>gd :YcmCompleter GetDoc<enter>
+nmap <leader>rn :YcmCompleter RefactorRename
+
+" Navigation
+nmap <leader>w <c-w>
