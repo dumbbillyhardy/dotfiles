@@ -36,6 +36,7 @@ alias gitprune="git branch --merged | grep -v \"\*\" | grep -v master | grep -v 
 
 export PATH="$PATH:$HOME/.fzf/bin"
 export PATH="$PATH:$HOME/bin/"
+export PATH="$PATH:$HOME/.all-bin/"
 export PATH="$PATH:/usr/sbin/"
 export PATH="$PATH:$ECLIPSE_HOME"
 export FZF_DEFAULT_COMMAND="find -L * -path '*/\.*' -prune -o -type f -print -o -type l -print 2> /dev/null"
