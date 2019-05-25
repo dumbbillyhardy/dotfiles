@@ -132,6 +132,9 @@ Plug 'leshill/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Git
 Plug 'tpope/vim-fugitive'
 
@@ -144,7 +147,8 @@ let g:fzf_command_prefix = ''
 "set ft=html.javascript_tern
 set ft=html.javascript
 
-map <C-h> :NERDTreeToggle<CR>
+map <leader>jh :NERDTreeToggle<CR>
+map <leader>jj :NERDTreeFind<CR>
 
 let g:javascript_plugin_jsdoc = 1
 let g:syntastic_html_checkers = ['eslint']
