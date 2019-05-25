@@ -1,0 +1,9 @@
+Dear future self:
+
+Run the following two commands. The first will soft link the local config files (zshrc and the like) and the second will install random programs that you like
+(nvm and the like).
+
+Cheers!
+
+sh setup.sh
+sh installs.sh
