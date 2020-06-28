@@ -19,4 +19,4 @@
 [color "diff"]
 	meta = 
 [credential]
-	helper = osxkeychain
+	helper = cache --timeout=3600
