@@ -19,6 +19,10 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi
+
 alias java8="export JAVA_HOME=$JAVA_8_HOME"
 alias java9="export JAVA_HOME=$JAVA_9_HOME"
 java8
