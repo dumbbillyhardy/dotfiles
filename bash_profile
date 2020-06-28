@@ -1,4 +1,4 @@
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/bin/vim
 
 alias tomcat='cd $TOMCAT_HOME'
 alias tomstart='(tomcat; bin/startup.sh)'
