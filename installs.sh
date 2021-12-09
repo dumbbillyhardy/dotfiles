@@ -1,3 +1,6 @@
+# OhMyZsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # tmux
 sudo apt install tmux
 
